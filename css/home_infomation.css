@@ -3,7 +3,10 @@
 }
 
 header {
-    background-color: #6b5597b0;
+    /* background: linear-gradient(lightCyan, skyBlue, deepskyBlue); */
+    /* background: linear-gradient(to right, #ad6ab3, #4568dc); */
+    background: linear-gradient(to right, #1c92d2, #f2fcfe);
+    /* background-color: #6b5597b0; */
     padding: 30px;
     text-align: center;
     font-size: 35px;
@@ -12,7 +15,7 @@ header {
 
 nav {
     float: left;
-    width: 30%;
+    width: 30%; 
     height: 300px;
     background: #f5a8ef;
     padding: 20px;
@@ -23,7 +26,6 @@ nav ul {
     list-style-type: none;
     padding: 0;
 }
-
 
 article {
     float: left;
@@ -40,7 +42,9 @@ section ::after {
 }
 
 footer {
-    background-color: #5967b8; 
+    /* 시작할 색상 정하기  */
+    background-image:linear-gradient(45deg, violet, orange);
+    /* background-color: #5967b8;  */
     padding: 10px;
     text-align: center;
     color: white;
