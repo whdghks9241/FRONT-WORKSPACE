@@ -1,63 +1,77 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style>
-            button {
-                background-color: #007bff;
-                color: #fff;
-                padding: 10px 20px;
-                cursor: pointer;
-                /* 그림자 추가 */
-                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-                /*마우스를 호버 시 색상 반짝이는 효과 추가*/
-                transition: background-color 0.3s, box-shadow 0.3s;
-
-            }
-
-              /* 마우스 스타일 변경 */
-            button:hover  {
-                background-color: #0056b3;
-                box-shadow: 20px 20px 5px rgb(20 26 239/20%);
-            };
-
-            .container {
-                max-width: 800px;
-                margin: 0 auto;
-            }
-
-            h1 {
-                text-align: center;
-            }
-
-        </style>
-        <body>
-
-            <div class="container">
-                <h1>점심 게시판</h1>
-                <ul>
-                    <!-- 게시물 목록 작성하는 곳 -->
-                    <li>
-                        <h2>맥주창고 역삼점</h2>
-                        <p>메뉴 더보기 -> <a href = "https://www.instagram.com/lunch_mz/?hl=ko">클릭</a></p>
-                    </li>
-                    <li>
-                        <h2>명동칼국수 역삼점</h2>
-                        <p>명동칼국수 9000원</p>
-                        <p>떡만두국 9000원</p>
-                    </li>
-                </ul>
-
-                <div>
-                    <!-- 메뉴 추가하는 추가란 -->
-                    <h2>새 게시물 작성하기</h2>
-                    <form>
-                        <input type="text" placeholder="제목">
-                        <textarea placeholder="내용작성"></textarea>
-                        <button type="submit">작성완료</button>
-                    </form>
-                </div>
-            </div>
-            
-        </body>
+        <link rel="stylesheet" type = "text/css" href="../css/board-styles.css">
     </head>
+    <body>
+
+        <div class="container">
+            <h1>점심 게시판</h1>
+            <ul class="post-list">
+                <!-- 게시물 목록 작성하는 곳 -->
+                <li class="post">
+                    <h2>맥주창고 역삼점</h2>
+                    <p>메뉴 더보기 -> <a href = "https://www.instagram.com/lunch_mz/?hl=ko">클릭</a></p>
+                </li>
+                <li class="post">
+                    <h2>신궁동 감자탕 역삼점</h2>
+                    <p>뼈해장국 9000원</p>
+                </li>
+                <li class="post">
+                    <h2>명동칼국수 역삼점</h2>
+                    <p>명동칼국수 9000원</p>
+                    <p>떡만두국 9000원</p>
+                </li>
+
+            </ul>
+
+            <div class="form-container">
+                <!-- 메뉴 추가하는 추가란 -->
+                <h2>새 게시물 작성하기</h2>
+                <form class="post-form">
+                    <input type="text" placeholder="제목">
+                    <textarea placeholder="내용작성하기"></textarea>
+                    <button type="submit" id = "post-button">게시물 작성</button>
+
+                    <button onclick="hihibutton()">안녕? 난 버튼이야</button>
+                    <button onclick="joinButton()">회원가입 하기</button>
+                    <p id ="joincheck">회원가입을 하는 중입니다.</p>
+                </form>
+
+                <script>
+                    function hihibutton() {
+                        alert("안녕 나는 버튼이라고해");
+                    }
+
+                    function joinButton() {
+                        var txt;
+                        if (confirm("버튼클릭!")) {
+                            txt = "클릭완료";
+                        } else {
+                            txt = "회원가입을 완료하지 못했습니다.";
+                        }
+
+                        document.getElementById("joincheck");
+                    }
+                </script>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        // 1. HTML 버튼 ID 가져오기
+                        const postbutton = document.getElementById("post-button");
+
+                        // 버튼을 클릭할 때 실행될 함수를 정의
+                        function buttonClick() {
+                            alert("게시물의 내용을 작성해주세요");
+                        }
+
+                        // 버튼 클릭 시 실행 될 함수 연결
+                        postbutton.addEventListener("click", buttonClick);
+                    })
+                </script>
+            </div>
+        </div>
+        
+    </body>
+
 </html>
