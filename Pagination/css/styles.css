@@ -1,0 +1,14 @@
+.img-container {
+    /* 이미지 가로로 나열하기 */
+    display: flex;
+    /* 가로로 공간이 부족할경우 다음줄로 넘김 */
+    flex-wrap: wrap;
+    /* 가로방향으로 중앙 정렬 이미지들이 수평 가운데 정렬 */
+    justify-content: center;
+}
+
+.image {
+    width: 500px;
+    height: 500px;
+    margin: 10px;
+}

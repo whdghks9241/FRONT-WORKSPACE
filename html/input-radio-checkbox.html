@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>라디오 버튼과 체크박스</title>
+        <!-- <link rel="stylesheet" href="../css/inputStyles.css"> -->
+    </head>
+    <body>
+        <h2>라디오 버튼</h2>
+        <form action="">
+            <label>
+                <input type="radio" name="gender" value="male" id="maleRadio">
+                남성
+            </label>
+            <label>
+                <input type="radio" name="gender" value="gemale" id="gemaleRadio">
+                여성
+            </label>
+            <label>
+                <input type="radio" name="gender" value="other"  id="otherRadio">
+                기타
+            </label>
+        </form>
+        <p id="genderResult">선택된 성별 : </p>
+
+        <h2>체크박스</h2>
+        <form>
+            <label>
+                <input type="checkbox" name="frutis" value="apple" id="applecheckbox">사과
+            </label>
+            <label>
+                <input type="checkbox" name="frutis" value="banana" id="bananacheckbox">바나나
+            </label>
+            <label>
+                <input type="checkbox" name="frutis" value="orange" id="orangecheckbox">오렌지
+            </label>
+        </form>
+        <p id="frutisResult">선택된 과일 : </p>
+
+        <script>
+            const genderResult = document.getElementById("genderResult");
+            const maleRadio = document.getElementById("maleRadio");
+            const gemaleRadio = document.getElementById("gemaleRadio");
+            const otherRadio = document.getElementById("otherRadio");
+
+            maleRadio.addEventListener("change" , updateGenderResult);
+            gemaleRadio.addEventListener("change" , updateGenderResult);
+            otherRadio.addEventListener("change" , updateGenderResult);
+
+            function updateGenderResult() {
+                if (maleRadio.checked) {
+                    genderResult.textContent = "선택된 성별 : 남성";
+                } else if (gemaleRadio.checked) {
+                    genderResult.textContent = "선택된 성별 : 여성";
+                } else if (otherRadio.checked) {
+                    genderResult.textContent = "선택된 성별 : 기타";
+                }
+            }
+
+            // 체크박스 이벤트 처리
+            const frutisResult = document.getElementById("frutisResult");
+            const applecheckbox = document.getElementById("applecheckbox");
+            const bananacheckbox = document.getElementById("bananacheckbox");
+            const orangecheckbox = document.getElementById("orangecheckbox");
+
+
+            applecheckbox.addEventListener("change" ,updateFrutisResult);
+            bananacheckbox.addEventListener("change" ,updateFrutisResult);
+            orangecheckbox.addEventListener("change" ,updateFrutisResult);
+
+            /*
+
+             */
+            function updateFrutisResult() {
+                // 과일을 담을수 있는 빈 배열
+                const selectFruis = [];
+                /*
+                applecheckbox.checked = check의 속성을 사용해서
+                각 체크박스의 선택 여부를 확인하고 , 선택된 과일 항목을 selectFruits 배열에 추가
+                */
+                if (applecheckbox.checked) {
+                    selectFruis.push("사과");
+                } 
+                
+                if (bananacheckbox.checked) {
+                    selectFruis.push("바나나")
+                }
+                
+                if (orangecheckbox.checked) {
+                    selectFruis.push("오렌지")
+                }
+
+                frutisResult.textContent = "선택된 과일 : " + selectFruis.join(", ");
+            }
+        </script>
+    </body>
+</html>
