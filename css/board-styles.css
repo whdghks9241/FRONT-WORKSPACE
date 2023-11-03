@@ -10,7 +10,7 @@ button {
 
 }
 
-  /* 마우스 스타일 변경 */
+  /* 마우스 스타일 변경 */ㄴ
 button:hover  {
     background-color: #0056b3;
     box-shadow: 20px 20px 5px rgb(20 26 239/20%);

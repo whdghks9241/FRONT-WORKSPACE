@@ -13,22 +13,78 @@
         <section>
             <nav>
                 <ul>
-                    <li class="navli">블로그 소개</li>
-                    <li class="navli">게시판</li>
-                    <li class="navli">방명록</li>
-                    <li class="navli">방명록</li>
+                    <li id="blogIntroduction" class="navli">블로그 소개</li>
+                    <li id="noticeBoard" class="navli">게시판</li>
+                    <li id="Album" class="navli">앨범</li>
+                    <li id="guestBook" class="navli">방명록</li>
                 </ul>
             </nav>
       
-            <article>
-                <h1>회사의 위대함</h1>
-                <p>우리 회사는 위대하고 위대한 회사이다.<br>
-                위대함이 하늘 부끄러움 없이 위대하다.</p>
+            <article id="container">
+                <h1>요리 블로그 </h1>
+                <p>요리 레시피 많이 올려주세요.</p>
             </article>
 
 
         </section>
 
+        <footer>
+            <p>전화번호 : 000-000-0000  |  오시는길 : 서울시 OOO OOOO</p>
+        </footer>
 
+        <script>
+            const blogIntroduction = document.getElementById("blogIntroduction");
+
+            
+            blogIntroduction.addEventListener("click", function() {
+                var host = document.getElementById("container");
+                host.innerHTML =  `
+                <div class="img-container">
+                    
+                 </div>
+                <h1>요리 블로그 </h1>
+                
+                <p>요리 레시피 많이 올려주세요.</p>`;
+            
+            });
+
+            const Album = document.getElementById("Album");
+            
+            Album.addEventListener("click", function() {
+                var host = document.getElementById("container");
+                host.innerHTML =  `          <h1>여기는 앨범 </h1>
+                <p>앨범을 만들거에요</p>`;
+            
+            });
+
+
+            const noticeBoard = document.getElementById("noticeBoard");
+            
+            noticeBoard.addEventListener("click", function() {
+                var host = document.getElementById("container");
+                host.innerHTML =  `          <h1>여기는 게시판 </h1>
+                <p>게시판 만들꺼에요</p>`;
+            
+            });
+
+            
+            const guestBook = document.getElementById("guestBook");
+            
+            guestBook.addEventListener("click", function() {
+                var host = document.getElementById("container");
+                host.innerHTML =  `          <h1>방명록 </h1>
+                <p>방명록을 만들꺼에요</p>
+                <p>방명록을 만들꺼에요</p>
+            <p>방명록을 만들꺼에요</p>
+                <p>방명록을 만들꺼에요</p>
+               <p>방명록을 만들꺼에요</p>
+              <p>방명록을 만들꺼에요</p>
+              <p>방명록을 만들꺼에요</p>
+              <p>방명록을 만들꺼에요</p>
+              <p>방명록을 만들꺼에요</p>
+              <p>방명록을 만들꺼에요</p>`;
+            
+            });
+        </script>
     </body>
 </html>

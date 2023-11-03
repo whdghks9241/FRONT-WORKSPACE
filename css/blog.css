@@ -10,21 +10,23 @@ header {
     text-align: center;
     font-size: 35px;
     color: white;
-    background-image:url("../image/img.png");
+    background-image:url("../image/img.jpg");
 
 }
 
 nav {
     float: left;
     width: 30%;
-    height: 400px;
+    height: 800px;
     border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
     padding: 20px;
 
 }
 
 nav ul {
     list-style-type: none;
+    height: 100%;
     padding: 0;
 }
 
@@ -32,8 +34,9 @@ article {
     float: left;
     padding: 20px;
     width: 70%;
+    border-bottom: 1px solid #000000;
     background-color: #f1f1f1;
-    height: 300px;
+    height: 800px;
 }
 
 section ::after {
@@ -43,10 +46,13 @@ section ::after {
 }
 
 footer {
+    /* 시작할 색상 정하기  */
+    border-bottom: 1px solid #000000;
+    /* background-color: #5967b8;  */
     padding: 10px;
     text-align: center;
-    color: white;
-}            
+    color: black;
+}                  
 
 @media (max-width:600px) {
     nav, article {
